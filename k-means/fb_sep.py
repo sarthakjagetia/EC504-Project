@@ -5,6 +5,12 @@ Created on Sat Apr  1 10:46:58 2017
 
 @author: yijliu
 """
+
+"""
+To run this code from command line type:
+python fb_sep.py -i messi_og.jpg -n 2
+
+"""
 from matplotlib import pyplot as plt
 import pylab
 from mpl_toolkits.mplot3d import Axes3D
