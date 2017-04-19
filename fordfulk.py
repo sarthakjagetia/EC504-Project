@@ -1,4 +1,4 @@
-# Python program for implementation of Ford Fulkerson algorithm
+# Developer: Aastha
   
 from collections import defaultdict
   
@@ -13,24 +13,19 @@ class Graph:
   
     '''Returns true if there is a path from source 's' to sink 't' in
     residual graph. Also fills parent[] to store the path '''
-    def BFS(self,s, t, parent):
- 
+    def BFS(self,s, t, parent): 
         # Mark all the vertices as not visited
-        visited =[False]*(self.ROW)
-         
+        visited =[False]*(self.ROW)         
         # Create a queue for BFS
         queue=[]
-         
         # Mark the source node as visited and enqueue it
         queue.append(s)
         visited[s] = True
          
         # Standard BFS Loop
         while queue:
- 
             #Dequeue a vertex from queue and print it
-            u = queue.pop(0)
-         
+            u = queue.pop(0)        
             # Get all adjacent vertices of the dequeued vertex u
             # If a adjacent has not been visited, then mark it
             # visited and enqueue it
@@ -38,13 +33,11 @@ class Graph:
                 if visited[ind] == False and val > 0 :
                     queue.append(ind)
                     visited[ind] = True
-                    parent[ind] = u
- 
+                    parent[ind] = u 
         # If we reached sink in BFS starting from source, then return
         # true, else false
         return True if visited[t] else False
-             
-     
+                 
     # Returns tne maximum flow from s to t in the given graph
     def FordFulkerson(self, source, sink):
  
@@ -80,7 +73,7 @@ class Graph:
         return max_flow
  
   
-# Create a graph given in the above diagram
+# Create a graph example
  
 graph = [[0, 16, 13, 0, 0, 0],
         [0, 0, 10, 12, 0, 0],
