@@ -39,4 +39,4 @@ def getData(imageFile):
 	f.close()
 	print (dataSize)
  
-getData("messi_og.jpg")
+getData("lena.jpg")
