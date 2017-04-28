@@ -1,6 +1,8 @@
 //to compile:  g++ PushRelabel.cpp -o pushrelabel
 //to run: ./pushrelabel
 #include <bits/stdc++.h>
+#include <fstream>
+#include <typeinfo>
 using namespace std;
  
 struct Edge
@@ -229,10 +231,12 @@ int main()
 {
     int V = 6;
     Graph g(V);
- 
+    char line;
+    int first_arg, second_arg, third_arg, a;
+	a=0;
     // Creating above shown flow network
-    g.addEdge(0, 1, 16);
-    g.addEdge(0, 2, 13);
+    /*g.addEdge(0, 1, 10);
+    g.addEdge(0, 2, 11);
     g.addEdge(1, 2, 10);
     g.addEdge(2, 1, 4);
     g.addEdge(1, 3, 12);
@@ -241,7 +245,41 @@ int main()
     g.addEdge(3, 5, 20);
     g.addEdge(4, 3, 7);
     g.addEdge(4, 5, 4);
- 
+ */
+    ifstream myfile; //reading from file; ofstream: to write to files; fstream to read and write to files
+    myfile.open("data.txt");
+    /*while(!myfile.eof()){
+    	getline(myfile,line);
+	//cout<<typeid(line).name();
+	//if(line == NULL){
+	//	break;
+	//}
+	//cout<<int(line[2]) - 48<<'\n'; //converting char to int
+	first_arg = int(line[0]) - 48;
+	second_arg = int(line[3]) - 48 ;
+	third_arg = int(line[6]) - 48;
+	cout<<third_arg<<'\n';
+	//g.addEdge(first_arg, second_arg, third_arg);
+    	//}
+    }*/
+
+
+   while(!myfile.eof()){
+	
+    	if(a != 3){
+		myfile>>line; first_arg = int(line) ;
+		myfile>>line; second_arg = int(line) - 48;
+		myfile>>line; third_arg = int(line) - 48;
+		a = a + 3;
+		cout<<first_arg<<'\n';
+		//cout<<typeid(line).name();
+		g.addEdge(first_arg, second_arg, third_arg);
+	}	
+	else a = 0;
+	//cout<<line<<'\n';
+	
+    }
+    myfile.close();
     // Initialize source and sink
     int s = 0, t = 5;
  
