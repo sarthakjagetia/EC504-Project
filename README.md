@@ -5,10 +5,14 @@ PROJECT NAME: Image Foreground/Background Segmentation using Network Flow
 TEAM NAME: DaVincii
  
 TEAM MEMBERS: 
-Aastha Anand (aastha24@bu.edu) ,
-Archana Bajaj (bajaj@bu.edu) , 
-Rashmi Agrawal (rashmi23@bu.edu) , 
-Sarthak Jagetia (sarthakj@bu.edu) , 
+Aastha Anand (aastha24@bu.edu) 
+
+Archana Bajaj (bajaj@bu.edu) 
+
+Rashmi Agrawal (rashmi23@bu.edu) 
+
+Sarthak Jagetia (sarthakj@bu.edu) 
+
 Yijian Liu (yijliu@bu.edu) 
 
 BRIEF DESCRIPTION:
