@@ -37,6 +37,8 @@ def getData(imageFile):
 	for data in range(0,dataSize):
 		f.write(str(dataList[data])+"\n")
 	f.close()
-	print (dataSize)
+	print dataSize
  
-getData("lena.jpg")
+#getData("lena.jpg")
+#getData("rgb.thumbnail")
+getData("messi.jpg")
