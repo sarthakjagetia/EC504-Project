@@ -8,3 +8,9 @@ html {
   -o-background-size: cover;
   background-size: cover; */
 }
+
+h1 {
+
+	font-family: 'Spirax', cursive;
+	font-size: 100px;
+}
